@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<Project1.Models.Mission>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -10,8 +11,9 @@
        Mission List <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li>@Html.ActionLink("New York Rochester", "Index", "MissionFAQ", new { missionName = "NYRM" }, null)</li>
-        <li>@Html.ActionLink("New York Rochester", "Index", "MissionFAQ", new { missionName = "NYRM" }, null)</li>
-        <li>@Html.ActionLink("New York Rochester", "Index", "MissionFAQ", new { missionName = "NYRM" }, null)</li>
+        @foreach (var item in Model)
+        {
+            <li>@Html.ActionLink(item.Name, "Detail", "Mission", new {id = item.ID}, null)</li>
+        }
     </ul>
 </div>

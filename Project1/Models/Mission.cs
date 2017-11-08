@@ -18,7 +18,7 @@ namespace Project1.Models
         public string Address { get; set; }
         public string Language { get; set; }
         public string Climate { get; set; }
-        public string Religion { get; set; }
+        public string DominateReligion { get; set; }
         public string FlagURL { get; set; }
 
     }

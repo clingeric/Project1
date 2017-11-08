@@ -1,0 +1,2 @@
+﻿ALTER TABLE Mission
+ALTER COLUMN Address VARCHAR(100);

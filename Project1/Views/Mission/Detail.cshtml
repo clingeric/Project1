@@ -1,0 +1,58 @@
+﻿@model Project1.Models.Mission
+@{
+    ViewBag.Title = "Detail";
+}
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Home","Index","Home",null,null)</li>
+    <li>@Html.ActionLink("Missions", "Index", "Mission", null, null)</li>
+    <li class="active">@Model.Name</li>
+</ol>
+<h2>@Model.Name Mission</h2>
+<div class="jumbotron">
+    
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.President)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Climate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DominateReligion)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayFor(model => Model.Name)
+        </th>
+        <th>
+            @Html.DisplayFor(model => Model.President)
+        </th>
+        <th>
+            @Html.DisplayFor(model => Model.Address)
+        </th>
+        <th>
+            @Html.DisplayFor(model => Model.Language)
+        </th>
+        <th>
+            @Html.DisplayFor(model => Model.Climate)
+        </th>
+        <th>
+            @Html.DisplayFor(model => Model.DominateReligion)
+        </th>
+    </tr>
+
+
+</table>
+
