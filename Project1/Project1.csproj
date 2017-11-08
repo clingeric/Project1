@@ -159,6 +159,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\220px-Flag_of_Mexico_%28reverse%29.png" />
+    <Content Include="Content\255px-Flag_of_New_York.svg.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\philippines-sister-missionaries-praying-teaching-ridin-1361351-wallpaper.jpg" />
