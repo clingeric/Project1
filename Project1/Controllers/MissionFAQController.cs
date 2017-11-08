@@ -12,7 +12,26 @@ namespace Project1.Controllers
         public ActionResult Index(string missionName)
         {
             ViewBag.missionName = missionName;
+
+            switch (missionName)
+            {
+                case "NYRM":
+                    
+                    break;
+                default:
+                    break;
+            }
+
             return View();
         }
     }
 }
+/*
+mission name
+mission president’s name
+mission address
+language
+climate
+dominate religion
+a flag or symbol for the mission.
+*/
