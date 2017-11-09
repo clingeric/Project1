@@ -52,22 +52,24 @@
             @Html.DisplayFor(model => Model.DominateReligion)
         </th>
     </tr>
-
-        @*
-
-        At the very bottom of each dynamically created mission’s FAQ’s will be a question form.
-        The user will be able to fill out this form to post a new question,
-            just like you would post a comment on Facebook.
-        ** For project 1 we will not be posting the questions or saving them in the database,
-            we just want the form to be there and available.
-
-        Under each FAQ question, there will also need to be a way for a user to answer that specific question, 
-            so you will need to add a reply button in order to have a response form dynamically
-            created when a missionary wants to answer another missionary’s question. 
-        You do not need to save the replies for this project.
-
-        *@
-
-
 </table>
+<div class="row" style="text-align: center">
+    <h3>FAQ's</h3>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="question">Question:</label>
+            <textarea class="form-control" rows="5" id="question"></textarea>
+            <button type="submit" class="btn btn-default">Submit Question</button>
+        </div>
+        <div class="form-group">
+            <label for="answer">Reply:</label>
+            <textarea class="form-control" rows="5" id="answer"></textarea>
+            <button type="submit" class="btn btn-default">Submit Reply</button>
+        </div>
+    </div>
+    <div class="col-md-6">
 
+    </div>
+</div>
