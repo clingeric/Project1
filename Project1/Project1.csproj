@@ -168,6 +168,7 @@
     <Content Include="Content\romania-missionaries-teaching-man-1312487-wallpaper.jpg" />
     <Content Include="Content\sister-missionaries-956170-wallpaper.jpg" />
     <Content Include="Content\social-interaction-missionaries-fellowshipping-1262209-wallpaper.jpg" />
+    <Content Include="Content\tmpnull.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
