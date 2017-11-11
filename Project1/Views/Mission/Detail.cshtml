@@ -2,6 +2,13 @@
 @{
     ViewBag.Title = "Detail";
 }
+
+<script>
+    function showHide() {
+        document.getElementById("reply-comment-form").style.visibility = 'visable';
+    }
+</script>
+
 <ol class="breadcrumb">
     <li>@Html.ActionLink("Home","Index","Home",null,null)</li>
     <li>@Html.ActionLink("Missions", "Index", "Mission", null, null)</li>
@@ -57,21 +64,94 @@
     <h3>FAQ's</h3>
 </div>
 @* Hard coded questions and answers with a reply button that dynamically loads a text box *@
+<div class="container ">
+    <div class="panel-group" id="faqAccordion">
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                <h4 class="panel-title">
+                    <a href="#" class="ing">Q: Do members provide many meals for missionaries?</a>
+                </h4>
+            </div>
+            <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-primary">Answer</span></h5>
+                    <p>
+                        Yes! Members there are extremely kind and are always willing to feed the missionaries. It's common to have more than one meal appointment a day. Be careful not to gain too much weight! ;)
+                    </p>
+                    <button type="button" class="btn btn-primary">Reply</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+                <h4 class="panel-title">
+                    <a href="#" class="ing">Q: What are the winters like?</a>
+                </h4>
+            </div>
+            <div id="question1" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-primary">Answer</span></h5>
+                    <p>
+                        Fortunately, they are very mild. You will need a nice jacket however. Be sure to get one before you leave, because they are hard to find there.
+                    </p>
+                    <button type="button" class="btn btn-primary">Reply</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+                <h4 class="panel-title">
+                    <a href="#" class="ing">Q: Do I need a bike?</a>
+                </h4>
+            </div>
+            <div id="question2" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-primary">Answer</span></h5>
+                    <p>
+                        Yes. No matter what are you serve in, you'll use your bike pretty much daily?
+                    </p>
+                    <button type="button" class="btn btn-primary">Reply</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+                <h4 class="panel-title">
+                    <a href="#" class="ing">Q: Is it safe to drink the water?</a>
+                </h4>
+            </div>
+            <div id="question3" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-danger">No Answer</span></h5>
+                    <p>
+
+                    </p>
+                    <a onclick="showHide()" type="button" class="btn btn-primary">Reply</a>
+                    <div id="reply-comment-form">
+                        HELLO
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/panel-group-->
+</div>
 <div class="row">
+    <div style="text-align: center">
+        <h3>Submit a Question:</h3>
+    </div>
+    <div class="col-md-3">
+
+    </div>
     <div class="col-md-6">
         <div class="form-group">
             <label for="question">Question:</label>
             <textarea class="form-control" rows="5" id="question"></textarea>
             <button type="submit" class="btn btn-default">Submit Question</button>
         </div>
-        <div class="form-group">
-            <label for="answer">Reply:</label>
-            <textarea class="form-control" rows="5" id="answer"></textarea>
-            <button type="submit" class="btn btn-default">Submit Reply</button>
-           
-        </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
 
     </div>
 </div>

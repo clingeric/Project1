@@ -1,9 +1,8 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Us";
 }
 <div style="text-align: center">
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+    <h2>@ViewBag.Title</h2>
 </div>
 
 
@@ -15,8 +14,10 @@
             Provo, UT 84601<br />
             <abbr title="Phone">P:</abbr>
             (801) 555-5555
+            <br />
             <abbr title="Email">E:</abbr>
             admin@missionconnections.com
+            <br />
         </address>
         <form>
             <div class="form-group">
@@ -39,8 +40,8 @@
                 <label for="message">Message:</label>
                 <textarea class="form-control" rows="5" id="message"></textarea>
             </div>
-            @* submit button clears the text *@
-            <button type="submit" class="btn btn-default">Submit</button>
+            @* submit button clears the text. Need to change it back to a type="submit" *@
+            <button onclick="toastr.success('We\'ll get back to you as soon as we can!','Thanks for contacting us!')" type="reset" value="Clear" class="btn btn-default">Submit</button>
         </form>
     </div>
     <div class="col-md-4"></div>
