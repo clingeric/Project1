@@ -1,16 +1,19 @@
 ﻿@model Project1.Models.Mission
 @{
-    ViewBag.Title = "Detail";
+    ViewBag.Title = "Mission Detail";
 }
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    function showHide() {
-        document.getElementById("reply-comment-form").style.visibility = 'visable';
-    }
+    $(document).ready(function () {
+        $("button").click(function () {
+            $(".form-group").toggle(100);
+            $("textarea").trigger("reset");
+        });
+});
 </script>
 
 <ol class="breadcrumb">
-    <li>@Html.ActionLink("Home","Index","Home",null,null)</li>
+    <li>@Html.ActionLink("Home", "Index", "Home", null, null)</li>
     <li>@Html.ActionLink("Missions", "Index", "Mission", null, null)</li>
     <li class="active">@Model.Name</li>
 </ol>
@@ -78,7 +81,13 @@
                     <p>
                         Yes! Members there are extremely kind and are always willing to feed the missionaries. It's common to have more than one meal appointment a day. Be careful not to gain too much weight! ;)
                     </p>
-                    <button type="button" class="btn btn-primary">Reply</button>
+                    <form>
+                        <div style="display: none" class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -94,7 +103,13 @@
                     <p>
                         Fortunately, they are very mild. You will need a nice jacket however. Be sure to get one before you leave, because they are hard to find there.
                     </p>
-                    <button type="button" class="btn btn-primary">Reply</button>
+                    <form>
+                        <div style="display: none" class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -110,7 +125,13 @@
                     <p>
                         Yes. No matter what are you serve in, you'll use your bike pretty much daily?
                     </p>
-                    <button type="button" class="btn btn-primary">Reply</button>
+                    <form>
+                        <div style="display: none" class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -126,14 +147,16 @@
                     <p>
 
                     </p>
-                    <a onclick="showHide()" type="button" class="btn btn-primary">Reply</a>
-                    <div id="reply-comment-form">
-                        HELLO
-                    </div>
+                    <form>
+                        <div style="display: none" class="form-group">
+                            <textarea class="form-control" rows="5"></textarea>
+                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
-
     </div>
     <!--/panel-group-->
 </div>
