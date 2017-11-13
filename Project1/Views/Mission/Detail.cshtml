@@ -5,11 +5,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("button").click(function () {
+        $(".reply-button").click(function () {
             $(".form-group").toggle(100);
             $("textarea").trigger("reset");
         });
 });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $(".submit-button").click(function () {
+            $(".form-group").hide(100);
+            $("textarea").trigger("reset");
+        });
+    });
 </script>
 
 <ol class="breadcrumb">
@@ -84,10 +93,10 @@
                     <form>
                         <div style="display: none" class="form-group">
                             <textarea class="form-control" rows="5"></textarea>
-                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
+                            <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="submit-button btn btn-success">Submit</button>
                         </div>
                     </form>
-                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
+                    <button type="submit" class="btn btn-primary reply-button">Reply</button>
                 </div>
             </div>
         </div>
@@ -109,7 +118,7 @@
                             <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
                         </div>
                     </form>
-                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
+                    <button type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -123,7 +132,7 @@
                 <div class="panel-body">
                     <h5><span class="label label-primary">Answer</span></h5>
                     <p>
-                        Yes. No matter what are you serve in, you'll use your bike pretty much daily?
+                        Yes. No matter what are you serve in, you'll use your bike pretty much daily.
                     </p>
                     <form>
                         <div style="display: none" class="form-group">
@@ -131,7 +140,7 @@
                             <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
                         </div>
                     </form>
-                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
+                    <button type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -153,7 +162,7 @@
                             <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="btn btn-success">Submit</button>
                         </div>
                     </form>
-                    <button id="reply-button" type="submit" class="btn btn-primary">Reply</button>
+                    <button type="submit" class="btn btn-primary">Reply</button>
                 </div>
             </div>
         </div>
@@ -168,10 +177,10 @@
 
     </div>
     <div class="col-md-6">
-        <div class="form-group">
+        <div>
             <label for="question">Question:</label>
             <textarea class="form-control" rows="5" id="question"></textarea>
-            <button type="submit" class="btn btn-default">Submit Question</button>
+            <button onclick="toastr.success('Your question will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Question sent!')" type="reset" value="Clear" class="btn btn-default">Submit Question</button>
         </div>
     </div>
     <div class="col-md-3">
