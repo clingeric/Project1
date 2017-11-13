@@ -11,8 +11,10 @@
        Mission List <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
+        @* dynamically populates dropdown will all missions in database *@
         @foreach (var item in Model)
         {
+            //clicking on the item returns the detail view with the id as a parameter
             <li>@Html.ActionLink(item.Name, "Detail", "Mission", new {id = item.ID}, null)</li>
         }
     </ul>

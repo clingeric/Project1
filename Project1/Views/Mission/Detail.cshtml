@@ -3,6 +3,7 @@
     ViewBag.Title = "Mission Detail";
 }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+@* allows for form to be dynamically toggled on click *@
 <script>
     $(document).ready(function () {
         $(".reply-button").click(function () {
@@ -12,6 +13,7 @@
 });
 </script>
 
+@* allows for submit button to hide the text form *@
 <script>
     $(document).ready(function () {
         $(".submit-button").click(function () {
@@ -29,7 +31,8 @@
 <h2>@Model.Name Mission</h2>
 <div class="jumbotron">
     <img src=@Model.FlagURL />
-</div>
+</div> 
+@* shows all of the values for the mission from the database *@
 <table class="table">
     <tr>
         <th>
@@ -93,6 +96,7 @@
                     <form>
                         <div style="display: none" class="form-group">
                             <textarea class="form-control" rows="5"></textarea>
+                            @* provides toast notification in the top right corner of the screen *@
                             <button onclick="toastr.success('Your reply will be posted once it has been reviewed by MissionConnections moderators. Thanks!','Reply sent!')" type="reset" value="Clear" class="submit-button btn btn-success">Submit</button>
                         </div>
                     </form>
@@ -169,6 +173,7 @@
     </div>
     <!--/panel-group-->
 </div>
+@* Post question form, deletes text on submit *@
 <div class="row">
     <div style="text-align: center">
         <h3>Submit a Question:</h3>

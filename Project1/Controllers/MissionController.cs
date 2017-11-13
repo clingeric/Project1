@@ -17,15 +17,18 @@ namespace Project1.Controllers
         // GET: Mission
         public ActionResult Index()
         {
+            //returns all missions in a list from the database
             var missions = db.Missions;
             return View(missions.ToList());
         }
         public ActionResult Detail(int? id)
         {
+            //returns a single view for the detail page
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            //finds the mission based on the id
             Mission mission = db.Missions.Find(id);
             if (mission == null)
             {
